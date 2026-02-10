@@ -1,0 +1,34 @@
+.footerPart {
+    display: flex;
+    justify-content: space-between;
+    padding-block: 32px;
+    background-color: hsl(0, 0%, 20%);
+}
+
+.footerPart p {
+    color: hsl(0, 0%, 100%);
+}
+
+.footerPart a {
+    color: hsl(0, 0%, 100%);
+}
+
+.contactsDiv {
+    padding-inline: 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contactLine {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+@media screen and (max-width: 500px) {
+    .footerPart {
+        flex-direction: column;
+        gap: 24px;
+    }
+}

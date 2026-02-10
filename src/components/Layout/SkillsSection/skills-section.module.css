@@ -1,0 +1,30 @@
+.skillsSection {
+    background-color: var(--background);
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.skillsList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 48px 24px;
+    padding-top: 10px;
+}
+
+.filtersDiv {
+    display: flex;
+    gap: 10px;
+}
+
+@media screen and (max-width: 500px) {
+    .filtersDiv {
+        flex-direction: column;
+    }
+
+    .skillsList {
+        flex-direction: column;
+    }
+}

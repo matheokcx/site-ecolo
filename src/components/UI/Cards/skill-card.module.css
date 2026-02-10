@@ -1,0 +1,27 @@
+.skillCard {
+    width: 15%;
+    background-color: var(--background-light);
+    padding-inline: 16px;
+    padding-block: 12px;
+    border: 2px solid hsl(0, 0%, 70%);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.skillCard img{
+    width: 30%;
+    height: 100px;
+}
+
+.skillCard h3{
+    text-align: center;
+}
+
+@media screen and (max-width: 500px){
+    .skillCard {
+        width: 85%;
+    }
+}

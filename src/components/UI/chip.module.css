@@ -1,0 +1,9 @@
+.chip {
+    width: fit-content;
+    padding-inline: 16px;
+    padding-block: 8px;
+    border-radius: 24px;
+    border-width: 2px;
+    border-style: solid;
+    place-content: center;
+}

@@ -1,0 +1,44 @@
+.header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: 32px;
+    top: 0;
+    position: sticky;
+    backdrop-filter: blur(10px);
+}
+
+.links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-left: 32px;
+}
+
+.links a {
+    font-weight: 600;
+}
+
+.languageSelect {
+    padding: 8px 12px;
+    border: 2px solid var(--secondary-text);
+    border-radius: 8px;
+    background-color: var(--background);
+    color: var(--main-text);
+    font-weight: 600;
+    cursor: pointer;
+    margin-right: 32px;
+}
+
+.languageSelect:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+@media screen and (max-width: 500px) {
+    .header {
+        justify-content: start;
+        padding-block: 10px;
+    }
+}

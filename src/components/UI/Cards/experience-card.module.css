@@ -1,0 +1,14 @@
+.experienceCard {
+    padding: 10px;
+    background-color: var(--background-light);
+    border: 2px solid hsl(0, 0%, 70%);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.datesDiv {
+    display: flex;
+    gap: 10px;
+}

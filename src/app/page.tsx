@@ -1,20 +1,13 @@
-import Link from "next/dist/client/link";
-import styles from "./page.module.css";
+import HeroSection from "@/components/Layout/HeroSection/HeroSection";
+import SkillsSection from "@/components/Layout/SkillsSection/SkillsSection";
+import ExperiencesSection from "@/components/Layout/ExperienceSection/ExperiencesSection";
 
 const Home = () => {
   return (
       <>
-        <nav className={styles.navigationBar}>
-            <Link href="/history">Histoire</Link>
-            <Link href="/projects">Projets</Link>
-            <Link href="/contacts">Contacts</Link>
-        </nav>
-        <main>
-
-        </main>
-        <footer>
-
-        </footer>
+        <HeroSection />
+        <ExperiencesSection />
+        <SkillsSection />
       </>
   );
 };

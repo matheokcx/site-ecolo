@@ -1,0 +1,52 @@
+.heroSection {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-top: 120px;
+}
+
+.titleDiv {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    border-width: 0 0 0 2px;
+    border-style: solid;
+    border-color: hsl(0, 0%, 50%);
+}
+
+.titleDiv h1 {
+    font-size: 32px;
+    margin-left: 20px
+}
+
+.imageDiv {
+    width: 100%;
+}
+
+.projectsCta {
+    width: fit-content;
+    margin-left: 20px;
+    transition: 1.5s;
+}
+
+.projectsCta a {
+    color: hsl(0, 0%, 100%);
+}
+
+.projectsCta:hover {
+    margin-left: 20px;
+    cursor: pointer;
+    background-color: var(--primary);
+}
+
+@media screen and (max-width: 500px) {
+    .heroSection {
+        flex-direction: column;
+        margin-top: 0;
+        padding: 0;
+    }
+}

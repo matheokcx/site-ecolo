@@ -1,0 +1,8 @@
+.experiencesSection {
+    background-color: var(--background);
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
