@@ -8,7 +8,7 @@
     "start": "next start",
     "deploy:stop-container": "docker compose stop || true",
     "deploy:remove-container": "docker compose down || true",
-    "deploy:start-container": "docker compose up -d",
+    "deploy:start-container": "docker compose up --build -d",
     "deploy": "npm run deploy:stop-container && npm run deploy:remove-container && npm run deploy:start-container"
   },
   "dependencies": {
