@@ -1,0 +1,8 @@
+.idea
+.claude
+node_modules
+Dockerfile
+.git
+README.md
+.github
+.gitignore

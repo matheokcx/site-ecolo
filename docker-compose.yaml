@@ -1,0 +1,15 @@
+services:
+  next:
+    build: .
+    container_name: ecolo-site
+    ports:
+      - 3000:3000
+    restart: always
+    volumes:
+      - .:/app
+    healthcheck:
+      test: curl --fail http://localhost:5000/ || exit 1
+      interval: 30s
+      timeout: 30s
+      retries: 3
+      start_period: 90s
