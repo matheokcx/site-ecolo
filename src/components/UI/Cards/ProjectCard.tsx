@@ -1,6 +1,7 @@
-import type {Project} from "../../../services/getInformationService.ts";
-import Chip from "../Chip.tsx";
+import type {Project} from "@/services/getInformationService";
+import Chip from "@/components/UI/Chip";
 import styles from "./project-card.module.css";
+import Image from "next/image";
 
 type ProjectCardProps = {
     project: Project;
@@ -14,7 +15,7 @@ const ProjectCard = ({project}: ProjectCardProps) => {
 
     return (
         <div className={styles.projectCard} onClick={handleClick}>
-            <img src={project.image} alt="Project image"/>
+            <Image src={project.image} alt="Project image" width={100} height={100} />
             <div className={styles.projectInformation}>
                 <div className={styles.texts}>
                     <h3>{project.name}</h3>

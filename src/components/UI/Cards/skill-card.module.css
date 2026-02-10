@@ -22,6 +22,6 @@
 
 @media screen and (max-width: 500px){
     .skillCard {
-        width: 85%;
+        width: 100%;
     }
 }
