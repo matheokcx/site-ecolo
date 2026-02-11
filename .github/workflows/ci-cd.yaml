@@ -17,7 +17,7 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Configure the ssh connection
+      - name: Deploy on the remote server
         env:
           SSH_AUTH_SOCK: /tmp/ssh_agent.sock
         run: |
@@ -25,9 +25,4 @@ jobs:
           ssh-keyscan -p ${{ secrets.SSH_PORT }} -t rsa ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
           ssh-agent -a $SSH_AUTH_SOCK > /dev/null
           ssh-add - <<< "${{ secrets.SSH_KEY }}"
-
-      - name: Deploy on the remote server
-        run: npm run deploy
-        env:
-          DOCKER_HOST: ssh://${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:${{ secrets.SSH_PORT }}
-          SSH_AUTH_SOCK: /tmp/ssh_agent.sock
+          DOCKER_HOST=ssh://${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:${{ secrets.SSH_PORT }} docker compose up -d --build
