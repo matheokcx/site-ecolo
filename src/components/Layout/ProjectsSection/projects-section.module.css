@@ -13,8 +13,14 @@
     gap: 32px 24px;
 }
 
+@media screen and (max-width: 768px) {
+    .projectsList {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 @media screen and (max-width: 500px) {
     .projectsList {
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: 1fr;
     }
 }

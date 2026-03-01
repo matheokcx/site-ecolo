@@ -16,7 +16,7 @@ const SkillsSection = () => {
         {category: "other", text: "Autres"}
     ];
     const noSelectedFilterStyle = {
-        backgroundColor: "hsla(0, 0%, 100%, 0%)",
+        backgroundColor: "transparent",
         border: "2px solid var(--secondary-text)",
         color: "var(--secondary-text)",
     };
@@ -27,16 +27,23 @@ const SkillsSection = () => {
     };
 
     return (
-        <section className={styles.skillsSection} id="skills">
+        <section className={styles.skillsSection} id="skills" aria-label="Compétences techniques">
             <h2>Compétences</h2>
-            <div className={styles.filtersDiv}>
+            <div className={styles.filtersDiv} role="tablist" aria-label="Filtrer par catégorie">
                 {filters.map((filter, index) => (
-                    <button key={index} onClick={() => handleFilterChange(filter.category)} style={selectFilter !== filter.category ? noSelectedFilterStyle : {}}>
+                    <button
+                        key={index}
+                        onClick={() => handleFilterChange(filter.category)}
+                        style={selectFilter !== filter.category ? noSelectedFilterStyle : {}}
+                        role="tab"
+                        aria-selected={selectFilter === filter.category}
+                        aria-label={`Filtrer par ${filter.text}`}
+                    >
                         {filter.text}
                     </button>
                 ))}
             </div>
-            <div className={styles.skillsList}>
+            <div className={styles.skillsList} role="tabpanel">
                 {skills.map((skill: Skill) => <SkillCard key={skill.name} skill={skill} />)}
             </div>
         </section>

@@ -8,25 +8,28 @@ type ProjectCardProps = {
 };
 
 const ProjectCard = ({project}: ProjectCardProps) => {
-    const handleClick = (): void => {
-        const link: string = project?.link ?? "https://matheokcx.fr";
-        window.open(link, '_blank')?.focus()
-    };
+    const link: string = project?.link ?? "#";
 
     return (
-        <div className={styles.projectCard} onClick={handleClick}>
-            <Image src={project.image} alt="Project image" width={100} height={100} />
+        <a
+            href={link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.projectCard}
+            aria-label={`Voir le projet ${project.name}`}
+        >
+            <Image src={project.image} alt={`Capture du projet ${project.name}`} width={400} height={240} />
             <div className={styles.projectInformation}>
                 <div className={styles.texts}>
                     <h3>{project.name}</h3>
-                    <label>{project.year}</label>
+                    <span className={styles.year}>{project.year}</span>
                     <p>{project.description}</p>
                 </div>
                 <div className={styles.tags}>
                     {project.techTags.map((tag: string) => <Chip key={tag} text={tag} />)}
                 </div>
             </div>
-        </div>
+        </a>
     );
 };
 

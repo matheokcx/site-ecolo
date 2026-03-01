@@ -3,7 +3,7 @@
     background-color: var(--background-light);
     padding-inline: 16px;
     padding-block: 12px;
-    border: 2px solid hsl(0, 0%, 70%);
+    border: 2px solid var(--secondary-text);
     border-radius: 12px;
     display: flex;
     flex-direction: column;

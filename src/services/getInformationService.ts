@@ -14,6 +14,14 @@ export type Skill = {
     category: SkillCategory;
 };
 
+export type Education = {
+    title: string;
+    school: string;
+    description: string;
+    startDate: Date;
+    endDate?: Date | undefined;
+};
+
 export type Project = {
     name: string;
     description: string;
@@ -189,6 +197,38 @@ export const getSkills = (categoryFilter?: SkillCategory | undefined): Skill[] =
         }
         return true;
     });
+};
+
+export const getEducation = (): Education[] => {
+    return [
+        {
+            title: "Master Informatique",
+            school: "ESGI",
+            description: "Spécialisation en développement web et mobile. Alternance en entreprise.",
+            startDate: new Date("2025-09-01"),
+        },
+        {
+            title: "Bachelor Informatique",
+            school: "ESGI",
+            description: "Formation en développement logiciel, bases de données et architecture web.",
+            startDate: new Date("2024-09-01"),
+            endDate: new Date("2025-06-30"),
+        },
+        {
+            title: "BTS SIO option SLAM",
+            school: "Lycée",
+            description: "Services Informatiques aux Organisations, spécialité Solutions Logicielles et Applications Métier.",
+            startDate: new Date("2022-09-01"),
+            endDate: new Date("2024-06-30"),
+        },
+        {
+            title: "Baccalauréat Général",
+            school: "Lycée",
+            description: "Spécialités Mathématiques et Numérique & Sciences Informatiques (NSI).",
+            startDate: new Date("2019-09-01"),
+            endDate: new Date("2022-06-30"),
+        },
+    ];
 };
 
 export const getProjects = (): Project[] => {

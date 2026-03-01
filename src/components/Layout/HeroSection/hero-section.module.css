@@ -12,15 +12,11 @@
     height: fit-content;
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 16px;
     border-width: 0 0 0 2px;
     border-style: solid;
-    border-color: hsl(0, 0%, 50%);
-}
-
-.titleDiv h1 {
-    font-size: 32px;
-    margin-left: 20px
+    border-color: var(--secondary-text);
+    padding-left: 20px;
 }
 
 .imageDiv {
@@ -28,19 +24,19 @@
 }
 
 .projectsCta {
+    display: inline-block;
     width: fit-content;
-    margin-left: 20px;
-    transition: 1.5s;
-}
-
-.projectsCta a {
-    color: hsl(0, 0%, 100%);
+    padding: 10px 16px;
+    background: var(--main-text);
+    color: var(--background-dark);
+    font-weight: 600;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: 0.3s;
 }
 
 .projectsCta:hover {
-    margin-left: 20px;
-    cursor: pointer;
-    background-color: var(--primary);
+    opacity: 0.8;
 }
 
 @media screen and (max-width: 500px) {

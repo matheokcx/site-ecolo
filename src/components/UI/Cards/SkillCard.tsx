@@ -9,7 +9,7 @@ type SkillCardProps = {
 const SkillCard = ({skill}: SkillCardProps) => {
     return (
         <div className={styles.skillCard}>
-            {skill.image && <Image src={skill.image} alt="Skill image" width={100} height={100} />}
+            {skill.image && <Image src={skill.image} alt={`Logo ${skill.name}`} width={100} height={100} />}
             <h3>{skill.name}</h3>
         </div>
     );
