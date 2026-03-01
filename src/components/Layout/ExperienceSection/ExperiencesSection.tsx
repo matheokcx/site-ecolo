@@ -6,7 +6,7 @@ const ExperiencesSection = () => {
     const experiences: Experience[] = getExperiences();
 
     return (
-        <section className={styles.experiencesSection} id="experiences">
+        <section className={styles.experiencesSection} id="experiences" aria-label="Expériences professionnelles">
             <h2>Expériences</h2>
             {experiences.map((experience: Experience) => <ExperienceCard key={experience.title} experience={experience} />)}
         </section>

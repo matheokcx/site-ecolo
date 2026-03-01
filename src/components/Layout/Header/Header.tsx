@@ -1,17 +1,21 @@
 import styles from "./header.module.css";
-import Link from "next/dist/client/link";
 
 const Header = () => {
-    const links: {link: string, textKey: string}[] = [
-        {link: "/", textKey: "Qui suis-je"},
-        {link: "/projects", textKey: "Projets"},
-        {link: "/contacts", textKey: "Contacts"}
+    const links: {href: string, text: string}[] = [
+        {href: "#whoami", text: "Qui suis-je"},
+        {href: "#skills", text: "Compétences"},
+        {href: "#projects", text: "Projets"},
+        {href: "#contacts", text: "Contacts"}
     ];
 
     return (
-        <nav className={styles.header}>
+        <nav className={styles.header} aria-label="Navigation principale" role="navigation">
             <div className={styles.links}>
-                {links.map((link) => <Link key={link.link} href={link.link}>{link.textKey}</Link>)}
+                {links.map((link) => (
+                    <a key={link.href} href={link.href} aria-label={`Aller à la section ${link.text}`}>
+                        {link.text}
+                    </a>
+                ))}
             </div>
         </nav>
     );

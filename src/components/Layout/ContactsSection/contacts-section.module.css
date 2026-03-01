@@ -1,0 +1,44 @@
+.contactsSection {
+    background-color: var(--background);
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contactsList {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.contactItem {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 16px 20px;
+    background-color: var(--background-light);
+    border: 2px solid var(--secondary-text);
+    border-radius: 10px;
+    text-decoration: none;
+    transition: border-color 0.2s;
+}
+
+.contactItem:hover {
+    border-color: var(--main-text);
+}
+
+.contactLabel {
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--secondary-text);
+}
+
+@media screen and (max-width: 500px) {
+    .contactsList {
+        grid-template-columns: 1fr;
+    }
+}

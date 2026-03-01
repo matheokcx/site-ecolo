@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Layout/Header/Header";
-import Footer from "@/components/Layout/Footer/Footer";
+import ContactsSection from "@/components/Layout/ContactsSection/ContactsSection";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -17,8 +17,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "CV - écologique",
-  description: "Site web conçu écologiquement.",
+  title: "CV - Mathéo Deleplanque",
+  description: "CV en ligne éco-responsable réalisé avec Next.js.",
 };
 
 const RootLayout = ({
@@ -30,8 +30,10 @@ const RootLayout = ({
     <html lang="fr">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <Header />
-        {children}
-        <Footer />
+        <main id="main-content">
+          {children}
+        </main>
+        <ContactsSection />
       </body>
     </html>
   );

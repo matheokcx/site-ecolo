@@ -1,21 +1,14 @@
 :root {
-  --background-light: hsl(0, 0%, 100%);
-  --background: hsl(0, 0%, 95%);
-  --background-dark: hsl(0, 0%, 90%);
+  --background-light: hsl(0, 0%, 15%);
+  --background: hsl(0, 0%, 10%);
+  --background-dark: hsl(0, 0%, 5%);
 
-  --main-text: hsl(0, 0%, 0%);
-  --secondary-text: hsl(0, 0%, 20%);
+  --main-text: hsl(0, 0%, 95%);
+  --secondary-text: hsl(0, 0%, 75%);
 }
 
-@media (prefers-color-scheme: dark) {
-  /*:root {
-    --background-light: hsl(0, 0%, 20%);
-    --background: hsl(0, 0%, 10%);
-    --background-dark: hsl(0, 0%, 0%);
-
-    --main-text: hsl(0, 0%, 100%);
-    --secondary-text: hsl(0, 0%, 90%);
-  }*/
+html {
+  scroll-behavior: smooth;
 }
 
 html,
@@ -78,8 +71,8 @@ a, label {
 }
 
 button {
-  background: hsl(0, 0%, 20%);
-  color: hsl(0, 0%, 100%);
+  background: var(--main-text);
+  color: var(--background-dark);
   font-weight: 600;
   border-radius: 10px;
   display: flex;
@@ -88,15 +81,20 @@ button {
   padding-inline: 16px;
   padding-block: 10px;
   border-width: 0;
-  transition: 1.5s;
+  transition: 0.3s;
 }
 
 button:hover {
   cursor: pointer;
+  opacity: 0.8;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+button:focus-visible {
+  outline: 2px solid var(--main-text);
+  outline-offset: 2px;
+}
+
+a:focus-visible {
+  outline: 2px solid var(--main-text);
+  outline-offset: 2px;
 }
